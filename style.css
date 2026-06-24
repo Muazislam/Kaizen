@@ -8,8 +8,39 @@
 }
 
 .box {
-    height: 200px;
-    width: 100px;
+    height: 400px;
+    width: 200px;
     border: 2px dotted lightsalmon;
     margin: 20px;
+}
+
+.box img {
+    height: 200px;
+    width: 100%;
+}
+
+.box h4 {
+    padding-left: 20px;
+    color: grey;
+}
+
+.box h3 {
+    padding: 0 20px;
+}
+
+.box p {
+    padding: 0 20px;
+    margin-top: -15px;
+}
+
+.image {
+    background-image: url(1350907.png);
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
