@@ -1,21 +1,15 @@
-nav {
-    background-color: black;
-    padding: 1px;
+.container {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border: 2px solid black;
+    flex: wrap;
 }
 
-.navbar {
-    float: right;
-    margin-top: -40px;
-    margin-right: 20px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.logo {
-    color: white;
-    margin-left: 20px;
+.box {
+    height: 200px;
+    width: 100px;
+    border: 2px dotted lightsalmon;
+    margin: 20px;
 }
