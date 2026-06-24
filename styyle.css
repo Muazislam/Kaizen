@@ -1,0 +1,37 @@
+.box {
+    height: 200px;
+    width: 200px;
+    border: 3px dotted black;
+    border-radius: 20px;
+}
+
+.image {
+    background-image: url(img1.jpg);
+    height: 500px;
+    width: 100%;
+    /* This only affects the height and width of div. 
+    aka the class whose name is written. The content in dic is not affected 
+    because the class on which i am applying css is div (the box) and not the content. 
+    For that, we make class for the text in between the class. */
+    background-size: cover;
+    background-position: center;
+    /* This makes the image distribute itself all across the boundries of the selected div. / */
+    background-color: rgba(87, 17, 172, 0.6);
+    background-blend-mode: multiply;
+    /* To multiply the image --background-image:url(img.jpg) with     background-color: rgba(87, 17, 172, 0.6); */
+}
+
+.btn a {
+    margin-top: 100px;
+    color: brown;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+
+.btn a:hover {
+    background-color: white;
+}
