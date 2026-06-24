@@ -1,51 +1,40 @@
-.box1 {
-    width: 600px;
-    height: 100px;
-    background-color: lightgreen;
-    margin-left: 0px;
-    margin-top: 0px;
-    border: 2px solid black;
+body {
+    margin: 0;
+    color: #fff;
+    font-family: system-ui, sans-serif;
 }
 
-.box2 {
-    width: 150px;
-    height: 300px;
-    background-color: lightgreen;
-    margin-top: 4px;
-    border: 2px solid black;
+.webpage_background_image {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(20, 20, 20, 0.9) 0%, rgba(30, 30, 30, 0.4) 100%), url('1350907.png') center/cover;
 }
 
-.box3 {
-    width: 600px;
-    height: 100px;
-    background-color: lightgreen;
-    margin-top: 4px;
-    border: 2px solid black;
+.image {
+    display: none;
+    /* Hides the HTML img tag since background is handled via CSS background-image */
 }
 
-.box4 {
-    width: 443px;
-    height: 188px;
-    background-color: lightgreen;
-    margin-top: -410px;
-    margin-left: 157px;
-    border: 2px solid black;
+.header {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    margin: 0 0 10px;
 }
 
-.box5 {
-    width: 220px;
-    height: 104px;
-    background-color: lightgreen;
-    margin-top: 4px;
-    margin-left: 157px;
-    border: 2px solid black;
+.btn a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    margin-top: 15px;
 }
 
-.box6 {
-    width: 217px;
-    height: 104px;
-    background-color: lightgreen;
-    margin-top: -107px;
-    margin-left: 383px;
-    border: 2px solid black;
+.btn a:hover {
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
