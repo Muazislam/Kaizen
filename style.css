@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/***************** Nav Bar *******************/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #904d4d;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    height: 85px;
+    width: 100%;
+}
+
+.header h2{
+    margin-left: 250px;
+    font-weight: lighter;
+}
+
+.navbar {
+    margin-right: 250px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px
+}
+
+.link {
+    list-style: none;
+}
+
+
+/*******************************************************/
+/*******************************************************/
+
+/********************Section 1: Hero page*****************************/
+
