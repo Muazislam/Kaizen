@@ -164,7 +164,7 @@ width: 300px;         /* Element must have a width */
 width: 300px;         /* Element must have a width */
   margin-left: 100px;   /* Pushes the element to the left */
   margin-right: 0; 
-  padding-left: 200px;
+  padding-right: 200px;
 
 }
 .feature-left h3{
@@ -187,3 +187,54 @@ width: 300px;         /* Element must have a width */
 /*******************************************************/
 
 /********************Section 3: More info*****************************/
+
+.more-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(sea-landscape-with-digital-art-style.jpg);
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.more-info h5{
+    font-size: clamp(40px, 50px, 60px);
+    padding-bottom: 5px;
+    margin-bottom: -0.1rem;
+    font-weight: 400;
+}
+
+.more-info p{
+    font-size: clamp(7px, 10px, 15px);
+    font-weight: 400;
+    margin-bottom: -0.1rem;
+    padding-bottom: 20px;
+}
+
+.btn.info {
+    width: 150px;
+    height: 35px;
+    border: 2px solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: white;
+    background: #745cf9;
+    border: 2px solid #745cf9;
+}
+
+
+/*******************************************************/
+/*******************************************************/
+
+/********************Section 4: Limitless option*****************************/
+
