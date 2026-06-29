@@ -194,7 +194,7 @@ width: 300px;         /* Element must have a width */
     align-items: center;
     flex-direction: column;
     background-image: url(sea-landscape-with-digital-art-style.jpg);
-    height: 30vh;
+    height: 35vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -217,8 +217,8 @@ width: 300px;         /* Element must have a width */
 }
 
 .btn .info {
-    width: 150px;
-    height: 35px;
+    width: 200px;
+    height: 55px;
     border: 2px solid;
 
     display: flex;
@@ -266,15 +266,15 @@ width: 300px;         /* Element must have a width */
 }
 
 .btn.read-more {
-    width: 150px;
-    height: 35px;
+    width: 200px;
+    height: 55px;
     border: 2px solid;
 
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 400;
     color: white;
     background: #745cf9;
@@ -305,6 +305,9 @@ width: 300px;         /* Element must have a width */
 }
 .client h2{
     padding-bottom: 80px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
 }
 
 /*******************************************************/
