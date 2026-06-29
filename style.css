@@ -203,8 +203,8 @@ width: 300px;         /* Element must have a width */
 }
 
 .more-info h5{
-    font-size: clamp(40px, 50px, 60px);
-    padding-bottom: 5px;
+    font-size: clamp(50px, 60px, 100px);
+    padding-bottom: 10px;
     margin-bottom: -0.1rem;
     font-weight: 400;
 }
@@ -216,7 +216,56 @@ width: 300px;         /* Element must have a width */
     padding-bottom: 20px;
 }
 
-.btn.info {
+.btn .info {
+    width: 150px;
+    height: 35px;
+    border: 2px solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
+    background: #745cf9;
+    border: 2px solid #745cf9;
+}
+
+
+/*******************************************************/
+/*******************************************************/
+
+/********************Section 4: Limitless option*****************************/
+
+
+.option {
+     background-color: #F5F5F5;
+}
+.li-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.li-option h2{
+    font-size: clamp(40px, 50px, 60px);
+    padding-bottom: 5px;
+    margin-bottom: -0.1rem;
+    font-weight: 400;
+}
+
+.li-option p{
+    font-size: clamp(7px, 10px, 15px);
+    font-weight: 400;
+    margin-bottom: -0.1rem;
+    padding-bottom: 20px;
+}
+
+.btn.read-more {
     width: 150px;
     height: 35px;
     border: 2px solid;
@@ -231,10 +280,72 @@ width: 300px;         /* Element must have a width */
     background: #745cf9;
     border: 2px solid #745cf9;
 }
-
+.center-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 120%; /* Increased from 100% */
+  
+  /* Pulls the image back equally on both sides to keep it centered */
+  margin-left: -10%; 
+  margin-right: -10%; 
+}
 
 /*******************************************************/
 /*******************************************************/
 
-/********************Section 4: Limitless option*****************************/
+/********************Section 5: Clients*****************************/
 
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.client h2{
+    padding-bottom: 80px;
+}
+
+/*******************************************************/
+/*******************************************************/
+
+/********************Section 6: Want wordpress theme*****************************/
+
+.theme-question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    padding: 35px;
+    gap: 90px;
+}
+.theme-question h5{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+/*******************************************************/
+/*******************************************************/
+
+/********************Section 6: Want wordpress theme*****************************/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 35px;
+}
+.footer h3 {
+    font-size: medium;
+    font-weight: 300;
+    margin-left: 200px;
+}
+
+.footerlinnk {
+    color: white;
+}
