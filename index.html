@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-------------------Navigation bar-------------------------->
-    <div class="Nav brand-name">    <!----------------------Brand name-->
+    <div class="Nav brand-name"> <!----------------------Brand name-->
         <h1>Roast & Co.</h1>
-        <p>Specify Coffee Roaster</p>  
+        <p>Specify Coffee Roaster</p>
     </div>
 
-    <div class="Nav navbar">    <!----------------------Nav links-->
+    <div class="Nav navbar"> <!----------------------Nav links-->
         <nav>
             <ul class="Nav navbar-list">
                 <li class="Nav nav-link">Menu</li>
@@ -25,7 +27,7 @@
         </nav>
     </div>
 
-    <div class="Nav order-btn">  <!----------------------Order button-->
+    <div class="Nav order-btn"> <!----------------------Order button-->
         <a href="">Order Online</a>
     </div>
 
@@ -34,26 +36,209 @@
 
     <!------------------------------Section 1------------------------------>
 
-    <div class="sec1 left-content">
+    <div class="sec1">
+        <div class="sec1 left-content">
 
-        <p>Specialty Coffee Roasters</p>
+            <p>Specialty Coffee Roasters</p>
 
-        <h1>
-            Crafted with
-            Passion & Precision
-        </h1>
+            <h1>
+                Crafted with
+                Passion & Precision
+            </h1>
 
-        <p>From bean to cup, we obsess over every detail. Experience specialty coffee the way it was meant to be — fresh-roasted, expertly brewed, and served with care. </p>
+            <p>
+                From bean to cup, we obsess over every detail.
+                Experience specialty coffee the way it was
+                meant to be — fresh-roasted, expertly brewed,
+                and served with care.
+            </p>
 
-        <div class="sec1 menu-btn">
-            <a href="">View Our Menu</a>
+            <div class="sec1 menu-btn">
+                <a href="">View Our Menu</a>
+            </div>
+
+            <div class="sec1 Order-btn">
+                <a href="">Order Online</a>
+            </div>
         </div>
 
-        <div class="sec1 Order-btn">
-            <a href="">Order Online</a>
+        <div class="sec1 right-content">
+            <img src="hero-img.jpg" alt="">
         </div>
+    </div>
+    <!---------------------------------------------------------------------->
+    <!---------------------------------------------------------------------->
+
+    <!------------------------------Section 2------------------------------>
+    <!-- ========================================== -->
+    <!-- SECTION 2: MENU PAGE                       -->
+    <!-- ========================================== -->
+    <!-- Main wrapper container for Section 2 (the Menu Page). 
+         Uses CSS class 'sec2' for Section 2 namespace styling and 'menu-container' to style layout, background, and padding. -->
+    <div class="sec2 menu-container">
+        
+        <!-- Menu Section Header: Holds the overall title and description/subtitle of the entire menu section -->
+        <div class="sec2 menu-head">
+            <!-- Main Section Title (displays "Our Menu") -->
+            <h1>
+                Our Menu
+            </h1>
+            <!-- Secondary tagline/description under the main title -->
+            <p>
+                Handcrafted drinks and fresh-baked goods, made with love
+            </p>
+        </div>
+
+        <!-- First Menu Category Section: Houses the 'Espresso Drinks' category header and its grid of item cards -->
+        <div class="sec2 card-section">
+
+            <!-- Category Header: Wrapper for the specific category title and subtext -->
+            <div class="sec2 above-text">
+                <!-- Title of this menu category (e.g., "Espresso Drinks") -->
+                <h1>Espresso Drinks</h1>
+                <!-- Brief explanatory description of what makes this category special -->
+                <p>Crafted with our signature house blend</p>
+            </div>
+
+            <!-- Cards Grid: A layout container (typically styled with CSS Grid or Flexbox) to display item cards in rows/columns -->
+            <div class="sec2 cards-grid">
+                
+                <!-- Individual Item Card: Espresso -->
+                <!-- 'card-box' styles the background, border, shadow, and spacing for a single menu item -->
+                <div class="sec2 card-box">
+                    <!-- Product image for Espresso -->
+                    <img src="photo-1510707577719-ae7c14805e3a.jpg" alt="Espresso">
+                    <!-- Product Name -->
+                    <h1>Espresso</h1>
+                    <!-- Product Description -->
+                    <p>Rich, bold, and perfectly extracted</p>
+                    <!-- Product Price -->
+                    <h1>$3.50</h1>
+                </div>
+
+                <!-- Individual Item Card: Cortado -->
+                <div class="sec2 card-box">
+                    <!-- Product image for Cortado -->
+                    <img src="photo-1510707577719-ae7c14805e3a.jpg" alt="Cortado">
+                    <!-- Product Name -->
+                    <h1>Cortado</h1>
+                    <!-- Product Description -->
+                    <p>Equal parts espresso and steamed milk </p>
+                    <!-- Product Price -->
+                    <h1>$4.50</h1>
+                </div>
+
+                <!-- Individual Item Card: Cappuccino (Flagged as Popular) -->
+                <div class="sec2 card-box">
+                    <img src="photo-1572442388796-11668a67e53d.jpg" alt="Cappuccino">
+                    <h1>Cappuccino</h1>
+                    <p>Velvety foam with a double shot</p>
+                    <h1>$5.00</h1>
+                    <!-- Popular badge -->
+                    <div class="sec2 yellow-btn">Popular</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Menu Category: Pour Overs -->
+        <div class="sec2 card-section">
+
+            <!-- Category Header -->
+            <div class="sec2 above-text">
+                <h1>Pour Overs</h1>
+                <p>Single-origin beans, brewed to order</p>
+            </div>
+
+            <!-- Cards Grid for Pour Overs -->
+            <div class="sec2 cards-grid">
+                
+                <!-- Ethiopian Yirgacheffe Card -->
+                <div class="sec2 card-box">
+                    <img src="hero-img.jpg" alt="Ethiopian Yirgacheffe">
+                    <h1>Ethiopian Yirgacheffe</h1>
+                    <p>Floral, citrus, and tea-like</p>
+                    <h1>$3.50</h1>
+                    <!-- Flavor Tags -->
+                    <div class="sec2 tags-container">
+                        <div class="sec2 brown-btn">Bergamot</div>
+                        <div class="sec2 brown-btn">Jasmine</div>
+                        <div class="sec2 brown-btn">Lemon</div>
+                    </div>
+                </div>
+
+                <!-- Colombian Huila Card (Popular) -->
+                <div class="sec2 card-box">
+                    <img src="photo-1572442388796-11668a67e53d.jpg" alt="Colombian Huila">
+                    <h1>Colombian Huila</h1>
+                    <p>Caramel, red apple, and milk chocolate</p>
+                    <h1>$4.5</h1>
+                    <!-- Flavor Tags & Popular Badge -->
+                    <div class="sec2 tags-container">
+                        <div class="sec2 yellow-btn">Popular</div>
+                        <div class="sec2 brown-btn">Caramel</div>
+                        <div class="sec2 brown-btn">Apple</div>
+                        <div class="sec2 brown-btn">Chocolate</div>
+                    </div>
+                </div>
+
+                <!-- Guatemalan Antigua Card -->
+                <div class="sec2 card-box">
+                    <img src="photo-1572442388796-11668a67e53d.jpg" alt="Guatemalan Antigua">
+                    <h1>Guatemalan Antigua</h1>
+                    <p>Smoky, cocoa, and spice</p>
+                    <h1>$5.00</h1>
+                    <!-- Flavor Tags -->
+                    <div class="sec2 tags-container">
+                        <div class="sec2 brown-btn">Coca</div>
+                        <div class="sec2 brown-btn">Smoke</div>
+                        <div class="sec2 brown-btn">Spice</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Menu Category: Cold Drinks -->
+        <div class="sec2 card-section">
+            <!-- Category Header -->
+            <div class="sec2 above-text">
+                <h1>Cold Drinks</h1>
+                <p>Refreshing and smooth</p>
+            </div>
+            <!-- Cards Grid for Cold Drinks (to be filled) -->
+            <div class="sec2 cards-grid">
+                
+                <!-- Cold Brew Card (Popular) -->
+                <div class="sec2 card-box">
+                    <img src="photo-1572442388796-11668a67e53d.jpg" alt="Cold Brew">
+                    <h1>Cold Brew</h1>
+                    <p>18-hour steeped perfection</p>
+                    <h1>$3.50</h1>
+                    <div class="sec2 yellow-btn">
+                        Popular
+                    </div>
+                </div>
+
+                <!-- Iced Latte Card -->
+                <div class="sec2 card-box">
+                    <img src="lsdfs16d735.jpg" alt="Iced Latte">
+                    <h1>Iced Latte</h1>
+                    <p>Espresso over ice with cold milk</p>
+                    <h1>$5.50</h1>
+                </div>
+
+                <!-- Nitro Cold Brew Card -->
+                <div class="sec2 card-box">
+                    <img src="photo-1592663527359-cf6642f54cff.jpg" alt="Nitro Cold Brew">
+                    <h1>Nitro Cold Brew</h1>
+                    <p>Creamy, cascading, on tap</p>
+                    <h1>$6.00</h1>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
 </body>
+
 </html>
