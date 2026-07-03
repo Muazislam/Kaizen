@@ -1,18 +1,28 @@
 /* ========================================== */
-/*  SECTION 4: Timeline graph                 */
+/*  SECTION 4: Timeline graph — dark mode      */
 /* ========================================== */
 
-body {
-    color: #213546;
-    background: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    --timeline-bg: #16110c;
+    /* page background */
+    --timeline-surface: #241b15;
+    /* card background */
+    --timeline-border: #3b2c20;
+    /* card border / connecting line */
+    --timeline-text: #ede6da;
+    /* body text on dark background */
+    --timeline-text-muted: #c9bfae;
+    /* secondary text (descriptions) */
+    --timeline-accent-start: #e0ae72;
+    /* gradient start — badges & dots */
+    --timeline-accent-end: #9c6a34;
+    /* gradient end — badges & dots */
 }
 
-.title {
-    position: relative;
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
+body {
+    color: var(--timeline-text);
+    background: var(--timeline-bg);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .timeline {
@@ -44,11 +54,12 @@ body {
     margin: 0;
     padding: 30px 0;
     text-align: center;
-    background: linear-gradient(#4F84C4, #00539C);
+    background: linear-gradient(var(--timeline-accent-start), var(--timeline-accent-end));
     border-radius: 100px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-    color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    color: #16110c;
     font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -70,7 +81,7 @@ body {
     top: 0;
     left: 50%;
     margin-left: -1px;
-    background: #4F84C4;
+    background: var(--timeline-border);
 }
 
 .timeline .row.timeline-left,
@@ -87,6 +98,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     margin: 41px 0 0 0;
+    color: var(--timeline-text);
 }
 
 .timeline .timeline-date::after {
@@ -96,8 +108,8 @@ body {
     width: 14px;
     height: 14px;
     top: 45px;
-    background: linear-gradient(#4F84C4, #00539C);
-    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    background: linear-gradient(var(--timeline-accent-start), var(--timeline-accent-end));
+    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
     border-radius: 15px;
     z-index: 1;
 }
@@ -116,9 +128,9 @@ body {
     display: inline-block;
     margin: 15px;
     padding: 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--timeline-border);
     border-radius: 6px;
-    background: #ffffff;
+    background: var(--timeline-surface);
 }
 
 .timeline .timeline-launch {
@@ -158,32 +170,32 @@ body {
 
 .timeline .timeline-box::after {
     top: 26px;
-    border-color: transparent transparent transparent #ffffff;
+    border-color: transparent transparent transparent var(--timeline-surface);
     border-width: 10px;
 }
 
 .timeline .timeline-box::before {
     top: 25px;
-    border-color: transparent transparent transparent #dddddd;
+    border-color: transparent transparent transparent var(--timeline-border);
     border-width: 11px;
 }
 
 .timeline .row.timeline-right .timeline-box::after {
-    border-color: transparent #ffffff transparent transparent;
+    border-color: transparent var(--timeline-surface) transparent transparent;
 }
 
 .timeline .row.timeline-right .timeline-box::before {
-    border-color: transparent #dddddd transparent transparent;
+    border-color: transparent var(--timeline-border) transparent transparent;
 }
 
 .timeline .timeline-launch .timeline-box::after {
     top: -20px;
-    border-color: transparent transparent #dddddd transparent;
+    border-color: transparent transparent var(--timeline-border) transparent;
 }
 
 .timeline .timeline-launch .timeline-box::before {
     top: -19px;
-    border-color: transparent transparent #ffffff transparent;
+    border-color: transparent transparent var(--timeline-surface) transparent;
     border-width: 10px;
     z-index: 1;
 }
@@ -197,7 +209,7 @@ body {
 
 .timeline .timeline-icon i {
     font-size: 25px;
-    color: #4F84C4;
+    color: var(--timeline-accent-start);
 }
 
 .timeline .timeline-box .timeline-text {
@@ -214,12 +226,14 @@ body {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 3px;
+    color: var(--timeline-text);
 }
 
 .timeline .timeline-text p {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0;
+    color: var(--timeline-text-muted);
 }
 
 @media (max-width: 768px) {
@@ -255,12 +269,12 @@ body {
 
     .timeline .row.timeline-left .timeline-box::after {
         left: -20px;
-        border-color: transparent #ffffff transparent transparent;
+        border-color: transparent var(--timeline-surface) transparent transparent;
     }
 
     .timeline .row.timeline-left .timeline-box::before {
         left: -22px;
-        border-color: transparent #dddddd transparent transparent;
+        border-color: transparent var(--timeline-border) transparent transparent;
     }
 
     .timeline .timeline-launch .timeline-box::after,

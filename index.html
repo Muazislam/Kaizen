@@ -4,47 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Roast & Co. | Specialty Coffee Roasters</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome: needed for the icons used in the Section 4 timeline -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <!-------------------Navigation bar-------------------------->
-    <div class="Nav brand-name"> <!----------------------Brand name-->
-        <h1>Roast & Co.</h1>
-        <p>Specify Coffee Roaster</p>
-    </div>
 
-    <div class="Nav navbar"> <!----------------------Nav links-->
-        <nav>
-            <ul class="Nav navbar-list">
-                <li class="Nav nav-link">Menu</li>
-                <li class="Nav nav-link">Our Story</li>
-                <li class="Nav nav-link">Process</li>
-                <li class="Nav nav-link">Location</li>
-                <li class="Nav nav-link">Shop</li>
+    <!-- ========================================== -->
+    <!-- NAVIGATION                                  -->
+    <!-- ========================================== -->
+    <header class="navbar">
+        <div class="brand">
+            <a href="#" class="brand-name">Roast & Co.</a>
+            <p class="tagline">Specialty Coffee Roaster</p>
+        </div>
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#shop">Shop</a></li>
             </ul>
         </nav>
-    </div>
 
-    <div class="Nav order-btn"> <!----------------------Order button-->
-        <a href="">Order Online</a>
-    </div>
+        <a href="#" class="order-btn">Order Online</a>
+    </header>
 
-    <!---------------------------------------------------------------------->
-    <!---------------------------------------------------------------------->
+    <!-- ========================================== -->
+    <!-- SECTION 1: Hero                             -->
+    <!-- ========================================== -->
+    <section class="sec1">
+        <div class="left-content">
+            <p class="eyebrow">Specialty Coffee Roasters</p>
 
-    <!------------------------------Section 1------------------------------>
-
-    <div class="sec1">
-        <div class="sec1 left-content">
-
-            <p>Specialty Coffee Roasters</p>
-
-            <h1>
-                Crafted with
-                Passion & Precision
-            </h1>
+            <h1>Crafted with Passion &amp; Precision</h1>
 
             <p>
                 From bean to cup, we obsess over every detail.
@@ -53,658 +50,443 @@
                 and served with care.
             </p>
 
-            <div class="sec1 menu-btn">
-                <a href="">View Our Menu</a>
-            </div>
-
-            <div class="sec1 Order-btn">
-                <a href="">Order Online</a>
+            <div class="hero-buttons">
+                <a href="#menu" class="menu-btn">View Our Menu</a>
+                <a href="#" class="order-btn">Order Online</a>
             </div>
         </div>
 
-        <div class="sec1 right-content">
-            <img src="hero-img.jpg" alt="">
+        <div class="right-content">
+            <img src="hero-img.jpg" alt="Freshly brewed specialty coffee">
         </div>
-    </div>
-    <!---------------------------------------------------------------------->
-    <!---------------------------------------------------------------------->
+    </section>
 
-    <!------------------------------Section 2------------------------------>
     <!-- ========================================== -->
-    <!-- SECTION 2: MENU PAGE                       -->
+    <!-- SECTION 2: Menu                             -->
     <!-- ========================================== -->
-    <!-- Main wrapper container for Section 2 (the Menu Page). 
-         Uses CSS class 'sec2' for Section 2 namespace styling and 'menu-container' to style layout, background, and padding. -->
-    <div class="sec2 menu-container">
+    <section class="sec2 menu-container" id="menu">
 
-        <!-- Menu Section Header: Holds the overall title and description/subtitle of the entire menu section -->
-        <div class="sec2 menu-head">
-            <!-- Main Section Title (displays "Our Menu") -->
-            <h1>
-                Our Menu
-            </h1>
-            <!-- Secondary tagline/description under the main title -->
-            <p>
-                Handcrafted drinks and fresh-baked goods, made with love
-            </p>
+        <div class="menu-head">
+            <h2>Our Menu</h2>
+            <p>Handcrafted drinks and fresh-baked goods, made with love</p>
         </div>
 
-        <!-- First Menu Category Section: Houses the 'Espresso Drinks' category header and its grid of item cards -->
-        <div class="sec2 card-section">
-
-            <!-- Category Header: Wrapper for the specific category title and subtext -->
-            <div class="sec2 above-text">
-                <!-- Title of this menu category (e.g., "Espresso Drinks") -->
-                <h1>Espresso Drinks</h1>
-                <!-- Brief explanatory description of what makes this category special -->
+        <!-- Espresso Drinks -->
+        <div class="card-section">
+            <div class="above-text">
+                <h3>Espresso Drinks</h3>
                 <p>Crafted with our signature house blend</p>
             </div>
 
-            <!-- Cards Grid: A layout container (typically styled with CSS Grid or Flexbox) to display item cards in rows/columns -->
-            <div class="sec2 cards-grid">
-
-                <!-- Individual Item Card: Espresso -->
-                <!-- 'card-box' styles the background, border, shadow, and spacing for a single menu item -->
-                <div class="sec2 card-box">
-                    <!-- Product image for Espresso -->
+            <div class="cards-grid">
+                <div class="card-box">
                     <img src="photo-1510707577719-ae7c14805e3a.jpg" alt="Espresso">
-                    <!-- Product Name -->
-                    <h1>Espresso</h1>
-                    <!-- Product Description -->
+                    <h4>Espresso</h4>
                     <p>Rich, bold, and perfectly extracted</p>
-                    <!-- Product Price -->
-                    <h1>$3.50</h1>
+                    <p class="price">$3.50</p>
                 </div>
 
-                <!-- Individual Item Card: Cortado -->
-                <div class="sec2 card-box">
-                    <!-- Product image for Cortado -->
+                <div class="card-box">
                     <img src="photo-1510707577719-ae7c14805e3a.jpg" alt="Cortado">
-                    <!-- Product Name -->
-                    <h1>Cortado</h1>
-                    <!-- Product Description -->
-                    <p>Equal parts espresso and steamed milk </p>
-                    <!-- Product Price -->
-                    <h1>$4.50</h1>
+                    <h4>Cortado</h4>
+                    <p>Equal parts espresso and steamed milk</p>
+                    <p class="price">$4.50</p>
                 </div>
 
-                <!-- Individual Item Card: Cappuccino (Flagged as Popular) -->
-                <div class="sec2 card-box">
+                <div class="card-box">
                     <img src="photo-1572442388796-11668a67e53d.jpg" alt="Cappuccino">
-                    <h1>Cappuccino</h1>
+                    <h4>Cappuccino</h4>
                     <p>Velvety foam with a double shot</p>
-                    <h1>$5.00</h1>
-                    <!-- Popular badge -->
-                    <div class="sec2 yellow-btn">Popular</div>
+                    <p class="price">$5.00</p>
+                    <span class="yellow-btn">Popular</span>
                 </div>
             </div>
         </div>
 
-        <!-- Second Menu Category: Pour Overs -->
-        <div class="sec2 card-section">
-
-            <!-- Category Header -->
-            <div class="sec2 above-text">
-                <h1>Pour Overs</h1>
+        <!-- Pour Overs -->
+        <div class="card-section">
+            <div class="above-text">
+                <h3>Pour Overs</h3>
                 <p>Single-origin beans, brewed to order</p>
             </div>
 
-            <!-- Cards Grid for Pour Overs -->
-            <div class="sec2 cards-grid">
-
-                <!-- Ethiopian Yirgacheffe Card -->
-                <div class="sec2 card-box">
+            <div class="cards-grid">
+                <div class="card-box">
                     <img src="hero-img.jpg" alt="Ethiopian Yirgacheffe">
-                    <h1>Ethiopian Yirgacheffe</h1>
+                    <h4>Ethiopian Yirgacheffe</h4>
                     <p>Floral, citrus, and tea-like</p>
-                    <h1>$3.50</h1>
-                    <!-- Flavor Tags -->
-                    <div class="sec2 tags-container">
-                        <div class="sec2 brown-btn">Bergamot</div>
-                        <div class="sec2 brown-btn">Jasmine</div>
-                        <div class="sec2 brown-btn">Lemon</div>
+                    <p class="price">$3.50</p>
+                    <div class="tags-container">
+                        <span class="brown-btn">Bergamot</span>
+                        <span class="brown-btn">Jasmine</span>
+                        <span class="brown-btn">Lemon</span>
                     </div>
                 </div>
 
-                <!-- Colombian Huila Card (Popular) -->
-                <div class="sec2 card-box">
+                <div class="card-box">
                     <img src="photo-1572442388796-11668a67e53d.jpg" alt="Colombian Huila">
-                    <h1>Colombian Huila</h1>
+                    <h4>Colombian Huila</h4>
                     <p>Caramel, red apple, and milk chocolate</p>
-                    <h1>$4.5</h1>
-                    <!-- Flavor Tags & Popular Badge -->
-                    <div class="sec2 tags-container">
-                        <div class="sec2 yellow-btn">Popular</div>
-                        <div class="sec2 brown-btn">Caramel</div>
-                        <div class="sec2 brown-btn">Apple</div>
-                        <div class="sec2 brown-btn">Chocolate</div>
+                    <p class="price">$4.50</p>
+                    <div class="tags-container">
+                        <span class="yellow-btn">Popular</span>
+                        <span class="brown-btn">Caramel</span>
+                        <span class="brown-btn">Apple</span>
+                        <span class="brown-btn">Chocolate</span>
                     </div>
                 </div>
 
-                <!-- Guatemalan Antigua Card -->
-                <div class="sec2 card-box">
+                <div class="card-box">
                     <img src="photo-1572442388796-11668a67e53d.jpg" alt="Guatemalan Antigua">
-                    <h1>Guatemalan Antigua</h1>
+                    <h4>Guatemalan Antigua</h4>
                     <p>Smoky, cocoa, and spice</p>
-                    <h1>$5.00</h1>
-                    <!-- Flavor Tags -->
-                    <div class="sec2 tags-container">
-                        <div class="sec2 brown-btn">Coca</div>
-                        <div class="sec2 brown-btn">Smoke</div>
-                        <div class="sec2 brown-btn">Spice</div>
+                    <p class="price">$5.00</p>
+                    <div class="tags-container">
+                        <span class="brown-btn">Cocoa</span>
+                        <span class="brown-btn">Smoke</span>
+                        <span class="brown-btn">Spice</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Third Menu Category: Cold Drinks -->
-        <div class="sec2 card-section">
-            <!-- Category Header -->
-            <div class="sec2 above-text">
-                <h1>Cold Drinks</h1>
+        <!-- Cold Drinks -->
+        <div class="card-section">
+            <div class="above-text">
+                <h3>Cold Drinks</h3>
                 <p>Refreshing and smooth</p>
             </div>
-            <!-- Cards Grid for Cold Drinks (to be filled) -->
-            <div class="sec2 cards-grid">
 
-                <!-- Cold Brew Card (Popular) -->
-                <div class="sec2 card-box">
+            <div class="cards-grid">
+                <div class="card-box">
                     <img src="photo-1572442388796-11668a67e53d.jpg" alt="Cold Brew">
-                    <h1>Cold Brew</h1>
+                    <h4>Cold Brew</h4>
                     <p>18-hour steeped perfection</p>
-                    <h1>$3.50</h1>
-                    <div class="sec2 yellow-btn">
-                        Popular
-                    </div>
+                    <p class="price">$3.50</p>
+                    <span class="yellow-btn">Popular</span>
                 </div>
 
-                <!-- Iced Latte Card -->
-                <div class="sec2 card-box">
+                <div class="card-box">
                     <img src="lsdfs16d735.jpg" alt="Iced Latte">
-                    <h1>Iced Latte</h1>
+                    <h4>Iced Latte</h4>
                     <p>Espresso over ice with cold milk</p>
-                    <h1>$5.50</h1>
+                    <p class="price">$5.50</p>
                 </div>
 
-                <!-- Nitro Cold Brew Card -->
-                <div class="sec2 card-box">
+                <div class="card-box">
                     <img src="photo-1592663527359-cf6642f54cff.jpg" alt="Nitro Cold Brew">
-                    <h1>Nitro Cold Brew</h1>
+                    <h4>Nitro Cold Brew</h4>
                     <p>Creamy, cascading, on tap</p>
-                    <h1>$6.00</h1>
+                    <p class="price">$6.00</p>
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <!---------------------------------------------------------------------->
-    <!---------------------------------------------------------------------->
+    </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 3: Learn About Us (Our Story) -->
+    <!-- SECTION 3: Our Story                        -->
     <!-- ========================================== -->
-    <div class="sec3">
-        <!-- Image container (empty placeholder for potential background or decorative image) -->
-        <div class="image"></div>
-        <!-- Main illustration representing the brand story -->
-        <img src="hjhjhj31.jpg" alt="Our Story Image">
-        <!-- Metrics box: highlights key statistics about the brand -->
+    <section class="sec3" id="story">
+        <img src="hjhjhj31.jpg" alt="Our roastery team at work">
+
         <div class="metrices-box">
-            <!-- Metric 1: Years of roasting experience -->
             <div class="box1">
-                <h1 class="metric-h1">15+</h1>
-                <p class="metric-p">Years Roasting</p>
+                <p class="metric-number">15+</p>
+                <p class="metric-label">Years Roasting</p>
             </div>
-            <!-- Metric 2: Number of coffee origins represented -->
             <div class="box2">
-                <h1 class="metric-h1">12</h1>
-                <p class="metric-p">Origins Country</p>
+                <p class="metric-number">12</p>
+                <p class="metric-label">Origins Country</p>
             </div>
-            <!-- Metric 3: Number of Portland locations -->
             <div class="box3">
-                <h1 class="metric-h1">3</h1>
-                <p class="metric-p">Portland Locations</p>
+                <p class="metric-number">3</p>
+                <p class="metric-label">Portland Locations</p>
             </div>
-            <!-- Metric 4: Happy customers count -->
             <div class="box4">
-                <h1 class="metric-h1">50k+</h1>
-                <p class="metric-p">Happy Customers</p>
+                <p class="metric-number">50k+</p>
+                <p class="metric-label">Happy Customers</p>
             </div>
         </div>
-        <!-- Right‑hand text block providing the brand story -->
+
         <div class="right-text">
-            <p>Est. 2009</p>
-            <h1>From Portland, With Love</h1>
-            <h4>What started as a small cart at the Saturday Market has grown into three beloved locations across
-                Portland.
-                But our mission remains the same: to source exceptional coffees, roast them with care, and share them
-                with our community.</h4>
-            <p>Every bag we roast tells a story — of the farmers who grew it, the land that nurtured it, and the hands
-                that brought it to your cup. We believe coffee should be more than just caffeine; it should be an
-                experience.</p>
-            <!-- Call‑to‑action button -->
-            <div class="sec3 btn">
-                <a href="">Learn more about us</a>
-            </div>
+            <p class="eyebrow">Est. 2009</p>
+            <h2>From Portland, With Love</h2>
+            <p class="lead">
+                What started as a small cart at the Saturday Market has grown into three beloved
+                locations across Portland. But our mission remains the same: to source exceptional
+                coffees, roast them with care, and share them with our community.
+            </p>
+            <p>
+                Every bag we roast tells a story — of the farmers who grew it, the land that
+                nurtured it, and the hands that brought it to your cup. We believe coffee should
+                be more than just caffeine; it should be an experience.
+            </p>
+            <a href="#" class="btn">Learn more about us</a>
         </div>
-    </div>
-
-
-    <!---------------------------------------------------------------------->
-    <!---------------------------------------------------------------------->
+    </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 4: Timeline graph -->
+    <!-- SECTION 4: Timeline                         -->
     <!-- ========================================== -->
-    <div class="sec4">
+    <section class="sec4" id="process">
         <div class="timeline-header">
-            <h1>From Origin to Cup</h1>
+            <h2>From Origin to Cup</h2>
             <p>Our commitment to quality at every step</p>
         </div>
 
-        <div class="timeline-container">
-            <div class="title">
-                <h2>Responsive Vertical Timeline</h2>
-                <p><a href="https://htmlcodex.com/css-timeline">More timeline designs</a></p>
-            </div>
-            <div class="timeline">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="timeline-container">
-                                <div class="timeline-end">
-                                    <p>Now</p>
-                                </div>
-                                <div class="timeline-continue">
+        <div class="timeline">
+            <div class="timeline-container">
 
-                                    <div class="row timeline-right">
-                                        <div class="col-md-6">
-                                            <p class="timeline-date">
-                                                01 Jun 2020
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon">
-                                                    <i class="fa fa-gift"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="timeline-end">
+                    <p>Now</p>
+                </div>
 
-                                    <div class="row timeline-left">
-                                        <div class="col-md-6 d-md-none d-block">
-                                            <p class="timeline-date">
-                                                01 Jan 2020
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon d-md-none d-block">
-                                                    <i class="fa fa-business-time"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                                <div class="timeline-icon d-md-block d-none">
-                                                    <i class="fa fa-business-time"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 d-md-block d-none">
-                                            <p class="timeline-date">
-                                                01 Jan 2020
-                                            </p>
-                                        </div>
-                                    </div>
+                <div class="timeline-continue">
 
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="timeline-year">
-                                                <p>2020</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row timeline-right">
-                                        <div class="col-md-6">
-                                            <p class="timeline-date">
-                                                01 Dec 2019
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon">
-                                                    <i class="fa fa-briefcase"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row timeline-left">
-                                        <div class="col-md-6 d-md-none d-block">
-                                            <p class="timeline-date">
-                                                01 Sep 2019
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon d-md-none d-block">
-                                                    <i class="fa fa-cogs"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                                <div class="timeline-icon d-md-block d-none">
-                                                    <i class="fa fa-cogs"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 d-md-block d-none">
-                                            <p class="timeline-date">
-                                                01 Sep 2019
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="row timeline-right">
-                                        <div class="col-md-6">
-                                            <p class="timeline-date">
-                                                01 Jun 2019
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon">
-                                                    <i class="fa fa-running"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row timeline-left">
-                                        <div class="col-md-6 d-md-none d-block">
-                                            <p class="timeline-date">
-                                                01 Mar 2019
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon d-md-none d-block">
-                                                    <i class="fa fa-home"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                                <div class="timeline-icon d-md-block d-none">
-                                                    <i class="fa fa-home"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 d-md-block d-none">
-                                            <p class="timeline-date">
-                                                01 Mar 2019
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-start">
-                                    <p>Launch</p>
-                                </div>
-                                <div class="timeline-launch">
-                                    <div class="timeline-box">
-                                        <div class="timeline-text">
-                                            <h3>Launched our company on 01 Jan 2019</h3>
-                                            <p>Lorem ipsum dolor sit amet</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="row timeline-right">
+                        <p class="timeline-date">01 Jun 2020</p>
+                        <div class="timeline-box">
+                            <div class="timeline-icon"><i class="fa-solid fa-gift"></i></div>
+                            <div class="timeline-text">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="row timeline-left">
+                        <p class="timeline-date">01 Jan 2020</p>
+                        <div class="timeline-box">
+                            <div class="timeline-icon"><i class="fa-solid fa-business-time"></i></div>
+                            <div class="timeline-text">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-year">
+                        <p>2020</p>
+                    </div>
+
+                    <div class="row timeline-right">
+                        <p class="timeline-date">01 Dec 2019</p>
+                        <div class="timeline-box">
+                            <div class="timeline-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="timeline-text">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-left">
+                        <p class="timeline-date">01 Sep 2019</p>
+                        <div class="timeline-box">
+                            <div class="timeline-icon"><i class="fa-solid fa-cogs"></i></div>
+                            <div class="timeline-text">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-right">
+                        <p class="timeline-date">01 Jun 2019</p>
+                        <div class="timeline-box">
+                            <div class="timeline-icon"><i class="fa-solid fa-running"></i></div>
+                            <div class="timeline-text">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-left">
+                        <p class="timeline-date">01 Mar 2019</p>
+                        <div class="timeline-box">
+                            <div class="timeline-icon"><i class="fa-solid fa-home"></i></div>
+                            <div class="timeline-text">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <div class="timeline-start">
+                    <p>Launch</p>
+                </div>
+
+                <div class="timeline-launch">
+                    <div class="timeline-box">
+                        <div class="timeline-text">
+                            <h3>Launched our company on 01 Jan 2019</h3>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-
-    <!---------------------------------------------------------------------->
-    <!---------------------------------------------------------------------->
+    </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 5: Take it home -->
+    <!-- SECTION 5: Take It Home                     -->
     <!-- ========================================== -->
-
-    <!-- Section 5: Product showcase - displays featured coffee products -->
-    <div class="sec5">
-        <!-- Header with title and subtitle -->
-        <div class="sec5 header">
-            <h1>Take It Home</h1>
+    <section class="sec5" id="shop">
+        <div class="header">
+            <h2>Take It Home</h2>
             <p>Fresh-roasted beans delivered to your door</p>
         </div>
 
-        <!-- Container for product cards -->
         <div class="showcase-products">
-            <!-- -------------------- Product 1 -------------------- -->
+
             <div class="prod prod1">
-                <!-- Image and badge for product 1 -->
                 <div class="product-img">
                     <img src="sdfdsfe.jpg" alt="House Blend">
-                    <div class="product1-tag">
-                        <a href="">BestSeller</a>
-                    </div>
+                    <span class="product1-tag">BestSeller</span>
                 </div>
-
-                <!-- Product information -->
-                <h1>House Blend</h1>
+                <h3>House Blend</h3>
                 <p>Our signature blend with notes of chocolate, caramel, and toasted nuts</p>
-                <h5>$18.00 / 12oz bag</h5>
-                <!-- Add‑to‑cart button -->
-                <div class="cart-btn">
-                    <a href="">Add to Cart</a>
-                </div>
+                <p class="price">$18.00 / 12oz bag</p>
+                <a href="#" class="cart-btn">Add to Cart</a>
             </div>
 
-            <!-- -------------------- Product 2 -------------------- -->
             <div class="prod prod2">
-                <!-- Image for product 2 -->
                 <div class="product-img">
                     <img src="iuiuiuuiu.jpg" alt="Decaf Blend">
                 </div>
-
-                <!-- Product information -->
-                <h1>Decaf Blend</h1>
+                <h3>Decaf Blend</h3>
                 <p>All the flavor, none of the buzz</p>
-                <h5>$19.00 / 12oz bag</h5>
-                <div class="cart-btn">
-                    <a href="">Add to Cart</a>
-                </div>
+                <p class="price">$19.00 / 12oz bag</p>
+                <a href="#" class="cart-btn">Add to Cart</a>
             </div>
 
-            <!-- -------------------- Product 3 -------------------- -->
             <div class="prod prod3">
-                <!-- Image for product 3 -->
                 <div class="product-img">
                     <img src="jklkjjm47e0e9.jpg" alt="Single Origin - Ethiopia">
                 </div>
-
-                <!-- Product information -->
-                <h1>Single Origin - Ethiopia</h1>
+                <h3>Single Origin - Ethiopia</h3>
                 <p>Light roast with bright citrus and floral notes</p>
-                <h5>$22.00 / 12oz bag</h5>
-                <div class="cart-btn">
-                    <a href="">Add to Cart</a>
-                </div>
+                <p class="price">$22.00 / 12oz bag</p>
+                <a href="#" class="cart-btn">Add to Cart</a>
             </div>
+
         </div>
 
-        <!-- Call‑to‑action button to view full catalog -->
-        <div class="shop-btn">
-            <a href="">Shop All Coffee</a>
-        </div>
-    </div>
-
-    <!---------------------------------------------------------------------->
-    <!---------------------------------------------------------------------->
+        <a href="#" class="shop-btn">Shop All Coffee</a>
+    </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 6: Testimonials -->
+    <!-- SECTION 6: Testimonials                     -->
     <!-- ========================================== -->
-    <!-- Section 6: Customer Testimonials – showcases client feedback -->
-    <div class="sec6">
-        <!-- Header for testimonial section -->
+    <section class="sec6">
         <div class="testimonial-header">
-            <h1>What People Are Saying </h1>
-            <h3>Join thousands of happy coffee lovers</h3>
+            <h2>What People Are Saying</h2>
+            <p>Join thousands of happy coffee lovers</p>
         </div>
-        <!-- Container for all testimonial cards -->
+
         <div class="testimonials">
-            <!-- Testimonial #1: Michael Chen – Coffee Enthusiast -->
+
             <div class="testimonial">
-                <h4>"The best coffee I've ever had. Their Ethiopian pour-over is transcendent." </h4>
-                <!-- Profile block for testimonial author -->
-                <div class="testmionial-profile">
-                    <!-- Profile picture placeholder (initial) -->
-                    <div class="profile-pic">
-                        M
-                    </div>
-                    <!-- Profile info: name and role -->
+                <blockquote>"The best coffee I've ever had. Their Ethiopian pour-over is transcendent."</blockquote>
+                <div class="testimonial-profile">
+                    <div class="profile-pic">M</div>
                     <div class="profile-info">
-                        <h3>Michael Chen</h3>
-                        <p>Coffee Enthusiast</p>
+                        <p class="name">Michael Chen</p>
+                        <p class="role">Coffee Enthusiast</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Testimonial #2: Sarah Williams – Food Blogger -->
             <div class="testimonial">
-                <h4>"Finally, a coffee shop that takes their craft seriously. Worth every penny." </h4>
-                <div class="testmionial-profile">
-                    <div class="profile-pic">
-                        S
-                    </div>
+                <blockquote>"Finally, a coffee shop that takes their craft seriously. Worth every penny."</blockquote>
+                <div class="testimonial-profile">
+                    <div class="profile-pic">S</div>
                     <div class="profile-info">
-                        <h3>Sarah Williams</h3>
-                        <p>Food Blogger</p>
+                        <p class="name">Sarah Williams</p>
+                        <p class="role">Food Blogger</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Testimonial #3: David Park – Home Barista -->
             <div class="testimonial">
-                <h4>"I've been a subscriber for 2 years. The beans arrive fresh, and the variety keeps me excited."
-                </h4>
-                <div class="testmionial-profile">
-                    <div class="profile-pic">
-                        D
-                    </div>
+                <blockquote>"I've been a subscriber for 2 years. The beans arrive fresh, and the variety keeps me excited."</blockquote>
+                <div class="testimonial-profile">
+                    <div class="profile-pic">D</div>
                     <div class="profile-info">
-                        <h3>David Park</h3>
-                        <p>Home Barista</p>
+                        <p class="name">David Park</p>
+                        <p class="role">Home Barista</p>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
-    <!---------------------------------------------------------------------->
-    <!---------------------------------------------------------------------->
+    </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 7: Newsletter -->
+    <!-- SECTION 7: Newsletter                       -->
     <!-- ========================================== -->
-
-    <!-- SECTION 7: Newsletter / Club Invitation -->
-    <div class="sec6">
-        <!-- Call to action title -->
-        <h1>Join the Club</h1>
-        <!-- Description of benefits -->
+    <section class="sec7">
+        <h2>Join the Club</h2>
         <p>Get exclusive offers, brewing tips, and first access to new roasts. Plus, 10% off your first order.</p>
-        <!-- Email subscription form wrapper -->
-        <div class="mail-part">
-            <!-- Email input field -->
-            <input type="email" name="" id="">
-            <!-- Subscribe button -->
-            <div class="subscribe-button">
-                <a href="">Subscribe</a>
-            </div>
-        </div>
-        <!-- Additional info about community -->
-        <p>Join 5,000+ coffee lovers. Unsubscribe anytime. </p>
-    </div>
 
-    <!---------------------------------------------------------------------->
-    <!-- ========================================== -->
-    <!-- SECTION 8: Footer -->
-    <!-- ========================================== -->
+        <form class="mail-part">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required>
+            <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
 
-    <!-- Footer container (overall wrapper) -->
-    <div class="sec8">
-        <!-- Footer wrapper start -->
-        <!-- Part 1: Brand information -->
+        <p class="fine-print">Join 5,000+ coffee lovers. Unsubscribe anytime.</p>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 8: Footer                           -->
+    <!-- ========================================== -->
+    <footer class="sec8">
         <div class="part1">
             <div class="footer-brand-info">
-                <h1>Roast &amp; Co.</h1>
-                <p>Artisan coffee roasters dedicated to sourcing, roasting, and serving the finest specialty coffees
-                    from around the world.</p>
+                <h2>Roast &amp; Co.</h2>
+                <p>Artisan coffee roasters dedicated to sourcing, roasting, and serving the finest
+                    specialty coffees from around the world.</p>
             </div>
         </div>
 
-        <!-- Part 2: Navigation menus -->
-        <!-- Main site menu links -->
         <div class="footer-menu">
             <h3>Menu</h3>
-            <!-- List of primary navigation sections -->
             <ul>
-                <li>Espresso Drinks</li>
-                <li>Pour Overs</li>
-                <li>Cold Drinks</li>
-                <li>Pastries</li>
+                <li><a href="#menu">Espresso Drinks</a></li>
+                <li><a href="#menu">Pour Overs</a></li>
+                <li><a href="#menu">Cold Drinks</a></li>
+                <li><a href="#menu">Pastries</a></li>
             </ul>
         </div>
 
-        <!-- Part 3: Shop links -->
         <div class="footer-shop">
             <h3>Shop</h3>
-            <!-- List of shop categories -->
             <ul>
-                <li>Coffee Beans</li>
-                <li>Subscriptions</li>
-                <li>Merchandise</li>
-                <li>Gift Cards</li>
+                <li><a href="#shop">Coffee Beans</a></li>
+                <li><a href="#shop">Subscriptions</a></li>
+                <li><a href="#shop">Merchandise</a></li>
+                <li><a href="#shop">Gift Cards</a></li>
             </ul>
         </div>
 
-        <!-- Part 4: Company links -->
         <div class="footer-company">
             <h3>Company</h3>
-            <!-- List of company pages -->
             <ul>
-                <li>Our story</li>
-                <li>Locations</li>
-                <li>Careers</li>
-                <li>Contact</li>
+                <li><a href="#story">Our story</a></li>
+                <li><a href="#location">Locations</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
 
-        <!-- Part 5: Hours, contact, and location -->
         <div class="part2">
             <div class="footer-hours">
-                <h3>HOURS</h3>
+                <h3>Hours</h3>
                 <p>Mon-Fri: 7am - 7pm</p>
                 <p>Sat-Sun: 8am - 6pm</p>
             </div>
@@ -715,25 +497,22 @@
                 <p>(555) 234-5678</p>
             </div>
 
-            <div class="footer-location">
+            <div class="footer-location" id="location">
                 <h3>Flagship Location</h3>
                 <p>123 Roastery Lane Portland, OR 97201</p>
             </div>
         </div>
 
-        <!-- Part 4: Copyright and legal navigation -->
         <div class="part3">
-            <p>© 2026 Roast & Co.. All rights reserved. </p>
-            <div class="nav-footer">
-                <nav>
-                    <ul>
-                        <li>Privacy Policy</li>
-                        <li>Terms of Service</li>
-                    </ul>
-                </nav>
-            </div>
+            <p>&copy; 2026 Roast &amp; Co. All rights reserved.</p>
+            <nav class="nav-footer">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </footer>
 
 </body>
 
