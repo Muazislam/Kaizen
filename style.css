@@ -1,8 +1,178 @@
-/* ========================================== */
-/*  SECTION 4: Timeline graph — dark mode      */
-/* ========================================== */
+/* ==========================================================
+   DESIGN SYSTEM
+   Roast & Co.
+   ========================================================== */
 
 :root {
+
+    /* ======================================================
+       TYPOGRAPHY
+       ====================================================== */
+
+    /* Main headings (Hero, Section Titles)
+       Font: Cormorant Garamond
+       Usage:
+       - Hero H1
+       - Section titles
+       - Timeline titles
+       - Product names
+    */
+    --font-heading: "Cormorant Garamond", serif;
+
+    /* Body text & UI
+       Font: Inter
+       Usage:
+       - Paragraphs
+       - Navigation
+       - Buttons
+       - Cards
+       - Footer
+    */
+    --font-body: "Inter", sans-serif;
+
+
+    /* ======================================================
+       FONT WEIGHTS
+       ====================================================== */
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+
+    /* ======================================================
+       FONT COLORS
+       ====================================================== */
+
+    /* Main white headings */
+    --text-white: #F8F6F3;
+
+    /* Normal body text */
+    --text-body: #9DA3AE;
+
+    /* Footer text */
+    --text-footer: #E6D7D0;
+
+    /* Muted labels */
+    --text-muted: #8D919A;
+
+    /* Brown accent text
+       Used in:
+       - "Specialty Coffee Roasters"
+       - Est. 2009
+       - Timeline labels
+    */
+    --text-accent: #CDA28F;
+
+    /* Price color */
+    --text-price: #E9CFC0;
+
+    /* Dark text */
+    --text-dark: #15171D;
+
+
+    /* ======================================================
+       BACKGROUND COLORS
+       ====================================================== */
+
+    /* Entire website background */
+    --bg-primary: #080D18;
+
+    /* Slightly lighter sections */
+    --bg-secondary: #1A2131;
+
+    /* Product section */
+    --bg-product: #7B6054;
+
+    /* Cards */
+    --bg-card: #171E2D;
+
+    /* Inputs */
+    --bg-input: #252D3D;
+
+    /* Footer */
+    --bg-footer: #7B6054;
+
+
+    /* ======================================================
+       BRAND COLORS
+       ====================================================== */
+
+    /* Primary brown */
+    --primary: #B58671;
+
+    /* Hover */
+    --primary-hover: #9C6F5D;
+
+    /* Secondary brown */
+    --secondary: #8C6B5E;
+
+
+    /* ======================================================
+       BUTTONS
+       ====================================================== */
+
+    /* Filled button */
+    --btn-primary-bg: var(--primary);
+    --btn-primary-text: #FFFFFF;
+
+    /* Outline button */
+    --btn-outline-border: #D8C0B4;
+    --btn-outline-text: #F5E8E1;
+
+    /* White button */
+    --btn-light-bg: #FFFFFF;
+    --btn-light-text: #5F463B;
+
+
+    /* ======================================================
+       BORDERS
+       ====================================================== */
+
+    --border-light: rgba(255,255,255,.08);
+
+    --border-card: rgba(255,255,255,.05);
+
+    --border-input: rgba(255,255,255,.08);
+
+
+    /* ======================================================
+       BADGES
+       ====================================================== */
+
+    /* Bestseller / Popular */
+    --badge-yellow: #F5C518;
+
+    /* Coffee flavour tags */
+    --badge-brown: #5F4C46;
+
+
+    /* ======================================================
+       ICONS
+       ====================================================== */
+
+    --icon-light: #F4F4F4;
+
+    --icon-circle: #252D3C;
+
+
+    /* ======================================================
+       SHADOWS
+       ====================================================== */
+
+    --shadow-card:
+        0 10px 30px rgba(0,0,0,.15);
+
+    --shadow-button:
+        0 6px 20px rgba(0,0,0,.15);
+
+    /* ========================================== */
+    /*  SECTION 4: Timeline graph — dark mode      */
+    /* ========================================== */
+
+
     --timeline-bg: #16110c;
     /* page background */
     --timeline-surface: #241b15;
@@ -17,7 +187,18 @@
     /* gradient start — badges & dots */
     --timeline-accent-end: #9c6a34;
     /* gradient end — badges & dots */
+
 }
+
+
+
+
+
+
+/* ========================================== */
+/*  SECTION 4: Timeline graph — dark mode      */
+/* ========================================== */
+
 
 body {
     color: var(--timeline-text);
