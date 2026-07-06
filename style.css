@@ -631,7 +631,7 @@ h1, h2, h3, h4 {
 .sec3 .metrices-box {
     position: absolute;
     bottom: 40px;
-    left: 590px;
+    left: 640px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 40px;
@@ -721,312 +721,267 @@ h1, h2, h3, h4 {
 
 
 
+/* ==========================================================
+   SECTION 4 : FROM ORIGIN TO CUP
+========================================================== */
+/* ==========================================================
+   ORIGIN TO CUP TIMELINE
+========================================================== */
 
+.oc-timeline-section{
+    padding:120px 60px;
+    background:var(--bg-primary);
+    overflow:hidden;
+}
 
+.oc-timeline-header{
+    text-align:center;
+    margin-bottom:90px;
+}
 
+.oc-timeline-header h2{
+    font-family:var(--font-heading);
+    font-size:3.8rem;
+    color:var(--text-white);
+    margin-bottom:15px;
+}
+
+.oc-timeline-header p{
+    font-size:1.1rem;
+    color:var(--text-body);
+}
+
+/* ========================================================== */
+
+.oc-timeline-wrapper{
+    position:relative;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* Vertical Line */
+
+.oc-timeline-wrapper::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    transform:translateX(-50%);
+    background:rgba(255,255,255,.12);
+}
+
+/* ========================================================== */
+
+.oc-timeline-item{
+    display:grid;
+    grid-template-columns:1fr 80px 1fr;
+    align-items:center;
+    margin:90px 0;
+    position:relative;
+}
+
+/* ========================================================== */
+
+.oc-center-node{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:5;
+}
+
+.oc-node{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:var(--bg-primary);
+    border:4px solid #D8B08A;
+}
+
+/* ========================================================== */
+
+.oc-timeline-card{
+    max-width:430px;
+}
+
+/* Left */
+
+.oc-item-left .oc-timeline-card{
+    justify-self:end;
+    text-align:right;
+    padding-right:45px;
+}
+
+/* Right */
+
+.oc-item-right .oc-timeline-card{
+    justify-self:start;
+    text-align:left;
+    padding-left:45px;
+}
+
+/* ========================================================== */
+
+.oc-timeline-top{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:20px;
+}
+
+.oc-item-left .oc-timeline-top{
+    justify-content:flex-end;
+}
+
+/* ========================================================== */
+
+.oc-step-label{
+    color:#D8B08A;
+    font-size:.95rem;
+    font-weight:500;
+}
+
+/* ========================================================== */
+
+.oc-icon-circle{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#202938;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.oc-icon-circle i{
+    color:#D8B08A;
+    font-size:21px;
+}
+
+/* ========================================================== */
+
+.oc-title{
+    font-family:var(--font-heading);
+    color:var(--text-white);
+    font-size:2.2rem;
+    margin-bottom:18px;
+}
+
+.oc-description{
+    color:var(--text-body);
+    line-height:1.8;
+    font-size:1.08rem;
+}
+
+/* ========================================================== */
+
+.oc-timeline-card:hover .oc-icon-circle{
+    transform:scale(1.08);
+    background:#293447;
+}
 
 /* ==========================================================
-   SECTION 4: Timeline graph — dark mode
-   ========================================================== */
+   TABLET
+========================================================== */
 
-.sec4 {
-    padding: 100px 170px 140px;
-    background: var(--timeline-bg);
+@media(max-width:992px){
+
+.oc-timeline-wrapper{
+    max-width:850px;
 }
 
-.timeline-header {
-    text-align: center;
-    margin-bottom: 60px;
+.oc-title{
+    font-size:1.9rem;
 }
 
-.timeline-header h2 {
-    font-size: 3rem;
-    margin-bottom: 14px;
 }
 
-.timeline-header p {
-    color: var(--timeline-text-muted);
-    font-size: 1.1rem;
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.oc-timeline-section{
+    padding:90px 25px;
 }
 
-.timeline {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 0;
-    color: var(--timeline-text);
-    font-family: var(--font-body);
+.oc-timeline-header h2{
+    font-size:2.6rem;
 }
 
-.timeline .timeline-container {
-    position: relative;
-    width: 100%;
+.oc-timeline-wrapper::before{
+    left:28px;
+    transform:none;
 }
 
-/* "Now" / "Launch" circular end caps */
-.timeline .timeline-end,
-.timeline .timeline-start,
-.timeline .timeline-year {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    z-index: 2;
+.oc-timeline-item{
+    display:block;
+    margin:70px 0;
 }
 
-.timeline .timeline-end p,
-.timeline .timeline-start p,
-.timeline .timeline-year p {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin: 0;
-    padding: 30px 0;
-    text-align: center;
-    background: linear-gradient(var(--timeline-accent-start), var(--timeline-accent-end));
-    border-radius: 100px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
-    color: #16110c;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
+.oc-center-node{
+    position:absolute;
+    left:20px;
+    top:20px;
 }
 
-.timeline .timeline-year {
-    margin: 30px 0;
+.oc-timeline-card{
+    max-width:100%;
+    margin-left:70px;
+    padding:0 !important;
+    text-align:left !important;
 }
 
-.timeline .timeline-continue {
-    position: relative;
-    width: 100%;
-    padding: 60px 0;
+.oc-item-left .oc-timeline-top,
+.oc-item-right .oc-timeline-top{
+    justify-content:flex-start;
 }
 
-/* the vertical connecting line */
-.timeline .timeline-continue::after {
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    margin-left: -1px;
-    background: var(--timeline-border);
+.oc-title{
+    font-size:1.7rem;
 }
 
-/* ----------------------------------------------------------
-   ROW: two-column layout, icon+date badge on the line,
-   title + description flowing to one side
-   ---------------------------------------------------------- */
-
-.timeline .row {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 70px;
+.oc-description{
+    font-size:1rem;
 }
 
-.timeline .row:last-child {
-    margin-bottom: 0;
 }
 
-/* LEFT rows: date+icon sit left of line, text hangs left too */
-.timeline .row.timeline-left {
-    justify-content: flex-end;
+/* ==========================================================
+   SMALL PHONES
+========================================================== */
+
+@media(max-width:480px){
+
+.oc-timeline-header h2{
+    font-size:2.2rem;
 }
 
-/* RIGHT rows: date+icon sit right of line, text hangs right too */
-.timeline .row.timeline-right {
-    justify-content: flex-start;
+.oc-title{
+    font-size:1.5rem;
 }
 
-.timeline .row.timeline-left,
-.timeline .row.timeline-right .timeline-date {
-    text-align: right;
+.oc-description{
+    font-size:.95rem;
 }
 
-.timeline .row.timeline-right,
-.timeline .row.timeline-left .timeline-date {
-    text-align: left;
+.oc-icon-circle{
+    width:48px;
+    height:48px;
 }
 
-/* the small date label beside the icon badge */
-.timeline .timeline-date {
-    position: relative;
-    flex: 0 0 auto;
-    width: 180px;
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: 0.95rem;
-    color: var(--timeline-accent-start);
-    margin: 12px 0 0 0;
+.oc-icon-circle i{
+    font-size:18px;
 }
 
-.timeline .row.timeline-left .timeline-date {
-    order: 1;
-    margin-right: 24px;
+.oc-step-label{
+    font-size:.9rem;
 }
 
-.timeline .row.timeline-right .timeline-date {
-    order: 2;
-    margin-left: 24px;
-}
-
-/* small ring dot exactly on the center line */
-.timeline .timeline-date::after {
-    content: '';
-    position: absolute;
-    top: 18px;
-    width: 10px;
-    height: 10px;
-    border: 2px solid var(--timeline-accent-start);
-    border-radius: 50%;
-    background: var(--timeline-bg);
-    z-index: 2;
-}
-
-.timeline .row.timeline-left .timeline-date::after {
-    right: -34px;
-}
-
-.timeline .row.timeline-right .timeline-date::after {
-    left: -34px;
-}
-
-/* content block — no card, no border, no bubble arrow */
-.timeline .timeline-box {
-    position: relative;
-    display: block;
-    flex: 0 0 auto;
-    width: 340px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-}
-
-.timeline .row.timeline-left .timeline-box {
-    order: 2;
-    text-align: right;
-}
-
-.timeline .row.timeline-right .timeline-box {
-    order: 1;
-    text-align: left;
-}
-
-.timeline .timeline-box::after,
-.timeline .timeline-box::before {
-    content: none; /* kill the old speech-bubble arrows */
-}
-
-/* icon badge — circular, floats over the line */
-.timeline .timeline-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    margin-bottom: 16px;
-    border-radius: 50%;
-    background: var(--timeline-surface);
-    border: 1px solid var(--timeline-border);
-    float: none;
-}
-
-.timeline .row.timeline-left .timeline-icon {
-    margin-left: auto;
-}
-
-.timeline .row.timeline-right .timeline-icon {
-    margin-right: auto;
-}
-
-.timeline .timeline-icon i {
-    font-size: 20px;
-    color: var(--timeline-accent-start);
-}
-
-.timeline .timeline-box .timeline-text {
-    float: none;
-    width: 100%;
-}
-
-.timeline .timeline-text h3 {
-    font-family: var(--font-heading);
-    font-size: 1.7rem;
-    font-weight: var(--fw-semibold);
-    margin-bottom: 10px;
-    color: var(--timeline-text);
-}
-
-.timeline .timeline-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: var(--fw-regular);
-    color: var(--timeline-text-muted);
-}
-
-/* Launch row — centered, no side offset */
-.timeline .timeline-launch {
-    width: 100%;
-    display: block;
-    margin: 15px 0;
-    padding: 0;
-    text-align: center;
-}
-
-.timeline .timeline-launch .timeline-box {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.timeline .timeline-launch .timeline-text {
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    .timeline .timeline-continue::after {
-        left: 28px;
-    }
-
-    .timeline .row,
-    .timeline .row.timeline-left,
-    .timeline .row.timeline-right {
-        justify-content: flex-start;
-        text-align: left;
-    }
-
-    .timeline .row.timeline-left .timeline-date,
-    .timeline .row.timeline-right .timeline-date {
-        order: 1;
-        width: 60px;
-        margin: 12px 16px 0 0;
-        text-align: left;
-    }
-
-    .timeline .row.timeline-left .timeline-date::after,
-    .timeline .row.timeline-right .timeline-date::after {
-        left: auto;
-        right: -8px;
-    }
-
-    .timeline .row.timeline-left .timeline-box,
-    .timeline .row.timeline-right .timeline-box {
-        order: 2;
-        width: calc(100% - 100px);
-        text-align: left;
-    }
-
-    .timeline .row.timeline-left .timeline-icon,
-    .timeline .row.timeline-right .timeline-icon {
-        margin: 0 0 16px 0;
-    }
-
-    .timeline .timeline-launch .timeline-box {
-        width: 100%;
-    }
 }
 /* ==========================================================
    SECTION 5: Take It Home
@@ -1064,7 +1019,7 @@ h1, h2, h3, h4 {
     background: #846358;
     border-radius: 14px;
     overflow: hidden;
-    height: 600px;
+    height: 700px;
 }
 
 .product-img {
