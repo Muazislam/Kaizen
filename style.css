@@ -631,10 +631,10 @@ h1, h2, h3, h4 {
 .sec3 .metrices-box {
     position: absolute;
     bottom: 40px;
-    left: 415px;
+    left: 590px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 26px 60px;
+    gap: 20px 40px;
     background: var(--bg-secondary);
     border: 1px solid var(--border-light);
     border-radius: 14px;
@@ -764,13 +764,14 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
+/* "Now" / "Launch" circular end caps */
 .timeline .timeline-end,
 .timeline .timeline-start,
 .timeline .timeline-year {
     position: relative;
     width: 100%;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .timeline .timeline-end p,
@@ -801,6 +802,7 @@ h1, h2, h3, h4 {
     padding: 60px 0;
 }
 
+/* the vertical connecting line */
 .timeline .timeline-continue::after {
     position: absolute;
     content: "";
@@ -810,6 +812,32 @@ h1, h2, h3, h4 {
     left: 50%;
     margin-left: -1px;
     background: var(--timeline-border);
+}
+
+/* ----------------------------------------------------------
+   ROW: two-column layout, icon+date badge on the line,
+   title + description flowing to one side
+   ---------------------------------------------------------- */
+
+.timeline .row {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 70px;
+}
+
+.timeline .row:last-child {
+    margin-bottom: 0;
+}
+
+/* LEFT rows: date+icon sit left of line, text hangs left too */
+.timeline .row.timeline-left {
+    justify-content: flex-end;
+}
+
+/* RIGHT rows: date+icon sit right of line, text hangs right too */
+.timeline .row.timeline-right {
+    justify-content: flex-start;
 }
 
 .timeline .row.timeline-left,
@@ -822,203 +850,191 @@ h1, h2, h3, h4 {
     text-align: left;
 }
 
+/* the small date label beside the icon badge */
 .timeline .timeline-date {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 41px 0 0 0;
-    color: var(--timeline-text);
+    position: relative;
+    flex: 0 0 auto;
+    width: 180px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--timeline-accent-start);
+    margin: 12px 0 0 0;
 }
 
+.timeline .row.timeline-left .timeline-date {
+    order: 1;
+    margin-right: 24px;
+}
+
+.timeline .row.timeline-right .timeline-date {
+    order: 2;
+    margin-left: 24px;
+}
+
+/* small ring dot exactly on the center line */
 .timeline .timeline-date::after {
     content: '';
-    display: block;
     position: absolute;
-    width: 14px;
-    height: 14px;
-    top: 45px;
-    background: linear-gradient(var(--timeline-accent-start), var(--timeline-accent-end));
-    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
-    border-radius: 15px;
-    z-index: 1;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--timeline-accent-start);
+    border-radius: 50%;
+    background: var(--timeline-bg);
+    z-index: 2;
 }
 
 .timeline .row.timeline-left .timeline-date::after {
-    left: -7px;
+    right: -34px;
 }
 
 .timeline .row.timeline-right .timeline-date::after {
-    right: -7px;
+    left: -34px;
 }
 
-.timeline .timeline-box,
-.timeline .timeline-launch {
+/* content block — no card, no border, no bubble arrow */
+.timeline .timeline-box {
     position: relative;
-    display: inline-block;
-    margin: 15px;
-    padding: 20px;
-    border: 1px solid var(--timeline-border);
-    border-radius: 6px;
-    background: var(--timeline-surface);
-}
-
-.timeline .timeline-launch {
-    width: 100%;
-    margin: 15px 0;
+    display: block;
+    flex: 0 0 auto;
+    width: 340px;
+    margin: 0;
     padding: 0;
     border: none;
-    text-align: center;
     background: transparent;
+}
+
+.timeline .row.timeline-left .timeline-box {
+    order: 2;
+    text-align: right;
+}
+
+.timeline .row.timeline-right .timeline-box {
+    order: 1;
+    text-align: left;
 }
 
 .timeline .timeline-box::after,
 .timeline .timeline-box::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
+    content: none; /* kill the old speech-bubble arrows */
 }
 
-.timeline .row.timeline-left .timeline-box::after,
-.timeline .row.timeline-left .timeline-box::before {
-    left: 100%;
+/* icon badge — circular, floats over the line */
+.timeline .timeline-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: var(--timeline-surface);
+    border: 1px solid var(--timeline-border);
+    float: none;
 }
 
-.timeline .row.timeline-right .timeline-box::after,
-.timeline .row.timeline-right .timeline-box::before {
-    right: 100%;
+.timeline .row.timeline-left .timeline-icon {
+    margin-left: auto;
 }
 
-.timeline .timeline-launch .timeline-box::after,
-.timeline .timeline-launch .timeline-box::before {
-    left: 50%;
-    margin-left: -10px;
-}
-
-.timeline .timeline-box::after {
-    top: 26px;
-    border-color: transparent transparent transparent var(--timeline-surface);
-    border-width: 10px;
-}
-
-.timeline .timeline-box::before {
-    top: 25px;
-    border-color: transparent transparent transparent var(--timeline-border);
-    border-width: 11px;
-}
-
-.timeline .row.timeline-right .timeline-box::after {
-    border-color: transparent var(--timeline-surface) transparent transparent;
-}
-
-.timeline .row.timeline-right .timeline-box::before {
-    border-color: transparent var(--timeline-border) transparent transparent;
-}
-
-.timeline .timeline-launch .timeline-box::after {
-    top: -20px;
-    border-color: transparent transparent var(--timeline-border) transparent;
-}
-
-.timeline .timeline-launch .timeline-box::before {
-    top: -19px;
-    border-color: transparent transparent var(--timeline-surface) transparent;
-    border-width: 10px;
-    z-index: 1;
-}
-
-.timeline .timeline-box .timeline-icon {
-    position: relative;
-    width: 40px;
-    height: auto;
-    float: left;
+.timeline .row.timeline-right .timeline-icon {
+    margin-right: auto;
 }
 
 .timeline .timeline-icon i {
-    font-size: 25px;
+    font-size: 20px;
     color: var(--timeline-accent-start);
 }
 
 .timeline .timeline-box .timeline-text {
-    position: relative;
-    width: calc(100% - 40px);
-    float: left;
+    float: none;
+    width: 100%;
+}
+
+.timeline .timeline-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    font-weight: var(--fw-semibold);
+    margin-bottom: 10px;
+    color: var(--timeline-text);
+}
+
+.timeline .timeline-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: var(--fw-regular);
+    color: var(--timeline-text-muted);
+}
+
+/* Launch row — centered, no side offset */
+.timeline .timeline-launch {
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.timeline .timeline-launch .timeline-box {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .timeline .timeline-launch .timeline-text {
     width: 100%;
 }
 
-.timeline .timeline-text h3 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 3px;
-    color: var(--timeline-text);
-}
-
-.timeline .timeline-text p {
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 0;
-    color: var(--timeline-text-muted);
-}
-
 @media (max-width: 768px) {
     .timeline .timeline-continue::after {
-        left: 40px;
+        left: 28px;
     }
 
-    .timeline .timeline-end,
-    .timeline .timeline-start,
-    .timeline .timeline-year,
+    .timeline .row,
     .timeline .row.timeline-left,
-    .timeline .row.timeline-right .timeline-date,
-    .timeline .row.timeline-right,
+    .timeline .row.timeline-right {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
     .timeline .row.timeline-left .timeline-date,
-    .timeline .timeline-launch {
+    .timeline .row.timeline-right .timeline-date {
+        order: 1;
+        width: 60px;
+        margin: 12px 16px 0 0;
         text-align: left;
     }
 
     .timeline .row.timeline-left .timeline-date::after,
     .timeline .row.timeline-right .timeline-date::after {
-        left: 47px;
+        left: auto;
+        right: -8px;
     }
 
-    .timeline .timeline-box,
-    .timeline .row.timeline-right .timeline-date,
-    .timeline .row.timeline-left .timeline-date {
-        margin-left: 55px;
+    .timeline .row.timeline-left .timeline-box,
+    .timeline .row.timeline-right .timeline-box {
+        order: 2;
+        width: calc(100% - 100px);
+        text-align: left;
+    }
+
+    .timeline .row.timeline-left .timeline-icon,
+    .timeline .row.timeline-right .timeline-icon {
+        margin: 0 0 16px 0;
     }
 
     .timeline .timeline-launch .timeline-box {
-        margin-left: 0;
-    }
-
-    .timeline .row.timeline-left .timeline-box::after {
-        left: -20px;
-        border-color: transparent var(--timeline-surface) transparent transparent;
-    }
-
-    .timeline .row.timeline-left .timeline-box::before {
-        left: -22px;
-        border-color: transparent var(--timeline-border) transparent transparent;
-    }
-
-    .timeline .timeline-launch .timeline-box::after,
-    .timeline .timeline-launch .timeline-box::before {
-        left: 30px;
-        margin-left: 0;
+        width: 100%;
     }
 }
-
 /* ==========================================================
    SECTION 5: Take It Home
    ========================================================== */
 
 .sec5 {
     padding: 100px 170px;
-    background: var(--bg-product);
+    background: #6F574D;
 }
 
 .sec5 .header {
@@ -1045,17 +1061,18 @@ h1, h2, h3, h4 {
 }
 
 .prod {
-    background: var(--bg-product);
+    background: #846358;
     border-radius: 14px;
     overflow: hidden;
+    height: 600px;
 }
 
 .product-img {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 0.75;
+    aspect-ratio: 1 / 0.;
     overflow: hidden;
-    border-radius: 14px;
+    
     margin-bottom: 20px;
 }
 
@@ -1080,6 +1097,7 @@ h1, h2, h3, h4 {
 .prod h3 {
     font-size: 1.4rem;
     margin-bottom: 8px;
+    margin-left: 20px;
 }
 
 .prod > p {
@@ -1088,6 +1106,7 @@ h1, h2, h3, h4 {
     font-size: 0.95rem;
     margin-bottom: 18px;
     max-width: 90%;
+    margin-left: 20px;
 }
 
 .prod .price {
@@ -1101,7 +1120,7 @@ h1, h2, h3, h4 {
 
 .prod .cart-btn {
     display: inline-block;
-    float: right;
+    margin-left: 40px;
     background: var(--btn-light-bg);
     color: var(--btn-light-text);
     font-weight: var(--fw-semibold);
