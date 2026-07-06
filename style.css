@@ -566,9 +566,9 @@ h1, h2, h3, h4 {
 .sec1 .right-content {
     position: relative;
     width: 55%;
-    max-width: 1050px;
-    aspect-ratio: 16 / 10.4;
-    border-radius: 50% / 45%;
+    max-width: 600px;       /* pick a max that fits your layout */
+    aspect-ratio: 1 / 1;    /* was 16 / 10.4 — equal width & height = circle */
+    border-radius: 50%;     /* was 50% / 45% — single value = perfect circle */
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -602,7 +602,7 @@ h1, h2, h3, h4 {
     height: 140px;
     background: var(--badge-yellow);
     opacity: .9;
-    bottom: -30px;
+    bottom: -1px;
     right: 620px;
 }
 
