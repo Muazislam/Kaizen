@@ -7,32 +7,63 @@
   </head>
   <body>
     <script>
-      let time = 10;
 
-      if (time > 1 && time <= 5) {
-        document.write("good morning");
-      } else if (time >= 6 && time <= 10) {
-        document.write("this is a good day");
-      } else if (time >= 11 && time <= 15) {
-        document.write("this is going to be an evening");
-      } else {
-        document.write("Time to sleep");
-      }
+      // ================ loops
+      // let time = 10;
 
-      let obj = {
-        name: "Muaz Islam Babar",
-        email: "muazislambabar@gmail.com",
-        city: "Multan",
-      };
+      // if (time > 1 && time <= 5) {
+      //   document.write("good morning");
+      // } else if (time >= 6 && time <= 10) {
+      //   document.write("this is a good day");
+      // } else if (time >= 11 && time <= 15) {
+      //   document.write("this is going to be an evening");
+      // } else {
+      //   document.write("Time to sleep");
+      // }
 
-      for(let key in obj){
-        document.write(obj[key] + "<br>")
-      }
+      // let obj = {
+      //   name: "Muaz Islam Babar",
+      //   email: "muazislambabar@gmail.com",
+      //   city: "Multan",
+      // };
 
-      for(let i = 1; i<=20; i++){
-        document.write(i + "<br>")
-        console.log(i)
-      }
+      // for(let key in obj){
+      //   document.write(obj[key] + "<br>")
+      // }
+
+      // for(let i = 1; i<=20; i++){
+      //   document.write(i + "<br>")
+      //   console.log(i)
+      // }
+
+      //====================================================
+
+      let arr = [1,2,3,4,5,6]
+
+      console.log(arr)
+      console.log(arr.length)
+      arr.push("Muaz") //push operator
+      console.log(arr)
+      arr.pop() //pop operator
+      console.log(arr)
+      arr.shift() //shift operator
+      console.log(arr)
+      arr.unshift(`ali`) // unshift operator
+      console.log(arr)
+      
+      console.log(arr.slice(1,4)) // slice operator
+
+      arr.splice(1,2, `muaz`, `basit`, 21) //splice operator
+      console.log(arr)
+
+      let arr2 = [7,8,9,10,11]
+      console.log(arr2)
+      let concatinateArray = arr.concat(arr2)
+      console.log(concatinateArray)
+
+      let concatinateArraySecond = [...arr,...arr2, `mehmet`, `mukhtiar`]
+      console.log(concatinateArraySecond)
+
     </script>
   </body>
 </html>
