@@ -7,7 +7,6 @@
   </head>
   <body>
     <script>
-
       // ================ loops
       // let time = 10;
 
@@ -38,32 +37,75 @@
 
       //====================================================
 
-      let arr = [1,2,3,4,5,6]
+      // let arr = [1, 2, 3, 4, 5, 6];
 
-      console.log(arr)
-      console.log(arr.length)
-      arr.push("Muaz") //push operator
-      console.log(arr)
-      arr.pop() //pop operator
-      console.log(arr)
-      arr.shift() //shift operator
-      console.log(arr)
-      arr.unshift(`ali`) // unshift operator
-      console.log(arr)
-      
-      console.log(arr.slice(1,4)) // slice operator
+      // console.log(arr);
+      // console.log(arr.length);
+      // arr.push("Muaz"); //push operator
+      // console.log(arr);
+      // arr.pop(); //pop operator
+      // console.log(arr);
+      // arr.shift(); //shift operator
+      // console.log(arr);
+      // arr.unshift(`ali`); // unshift operator
+      // console.log(arr);
 
-      arr.splice(1,2, `muaz`, `basit`, 21) //splice operator
-      console.log(arr)
+      // console.log(arr.slice(1, 4)); // slice operator
 
-      let arr2 = [7,8,9,10,11]
-      console.log(arr2)
-      let concatinateArray = arr.concat(arr2)
-      console.log(concatinateArray)
+      // arr.splice(1, 2, `muaz`, `basit`, 21); //splice operator
+      // console.log(arr);
 
-      let concatinateArraySecond = [...arr,...arr2, `mehmet`, `mukhtiar`]
-      console.log(concatinateArraySecond)
+      // let arr2 = [7, 8, 9, 10, 11];
+      // console.log(arr2);
+      // let concatinateArray = arr.concat(arr2);
+      // console.log(concatinateArray);
 
+      // let concatinateArraySecond = [...arr, ...arr2, `mehmet`, `mukhtiar`]; // Modern method
+      // console.log(concatinateArraySecond);
+
+      let fruits = [`apple`, `mango`, `banana`];
+
+      // fruits.forEach((item) => {   // forEach operator
+      //   console.log(item);
+      // });
+
+      //====
+
+      // let numbers = [1, 2, 3, 4, 5];
+      // let result = numbers.map((item) => {   // map operator
+      //   return item * 2;
+      // });
+      // console.log(result);
+
+      //====
+
+      // let number1 = [10, 20, 30, 40, 50];
+      // let result1 = numbers1.filter((item) => {    // filter operator
+      //   return item > 25;
+      // });
+      // console.log(result1);
+
+      //====
+
+      let users = [                 // making objects inside array
+        { id: 1, name: "Qasim" },
+        { id: 2, name: "Ali" },
+      ];
+      let resultZ = users.find((item) => {    // find operator in arrays
+        return item.id === 2;
+      });
+      console.log(resultZ);
+
+      // ====
+
+      let resultz = fruits.findIndex((item) => {
+        return item === "mango";
+      });
+      console.log(resultz);
+
+      // ====
+
+      console.log(fruits.includes("apple"));
     </script>
   </body>
 </html>
