@@ -6,106 +6,54 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="number" name="" id="num1" /><br />
+    <input type="text" name="" id="num2" /><br />
+    <button onclick="add()">Add</button><br />
+    <!--Addition tag-->
+    <button onclick="sub()">Subtract</button><br />
+    <!--Subtraction tag-->
+    <button onclick="mul()">Multiply</button><br />
+    <!--Multiplication tag-->
+    <button onclick="div()">Divide</button><br />
+    <!--Division tag-->
+    <h2 id="result"></h2>
+
     <script>
-      // ================ loops
-      // let time = 10;
+      //----------> Addition function .js
+      const add = () => {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let result = parseFloat(num1) + parseFloat(num2);
 
-      // if (time > 1 && time <= 5) {
-      //   document.write("good morning");
-      // } else if (time >= 6 && time <= 10) {
-      //   document.write("this is a good day");
-      // } else if (time >= 11 && time <= 15) {
-      //   document.write("this is going to be an evening");
-      // } else {
-      //   document.write("Time to sleep");
-      // }
+        document.getElementById("result").innerHTML = result;
+      };
 
-      // let obj = {
-      //   name: "Muaz Islam Babar",
-      //   email: "muazislambabar@gmail.com",
-      //   city: "Multan",
-      // };
+      //----------> Subtraction function .js
+      const sub = () => {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let result = parseFloat(num1) - parseFloat(num2);
 
-      // for(let key in obj){
-      //   document.write(obj[key] + "<br>")
-      // }
+        document.getElementById("result").innerHTML = result;
+      };
 
-      // for(let i = 1; i<=20; i++){
-      //   document.write(i + "<br>")
-      //   console.log(i)
-      // }
+      //----------> Multiplication function .js
+      const mul = () => {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let result = parseFloat(num1) * parseFloat(num2);
 
-      //====================================================
+        document.getElementById("result").innerHTML = result;
+      };
 
-      // let arr = [1, 2, 3, 4, 5, 6];
+      //----------> Division function .js
+      const div = () => {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let result = parseFloat(num1) / parseFloat(num2);
 
-      // console.log(arr);
-      // console.log(arr.length);
-      // arr.push("Muaz"); //push operator
-      // console.log(arr);
-      // arr.pop(); //pop operator
-      // console.log(arr);
-      // arr.shift(); //shift operator
-      // console.log(arr);
-      // arr.unshift(`ali`); // unshift operator
-      // console.log(arr);
-
-      // console.log(arr.slice(1, 4)); // slice operator
-
-      // arr.splice(1, 2, `muaz`, `basit`, 21); //splice operator
-      // console.log(arr);
-
-      // let arr2 = [7, 8, 9, 10, 11];
-      // console.log(arr2);
-      // let concatinateArray = arr.concat(arr2);
-      // console.log(concatinateArray);
-
-      // let concatinateArraySecond = [...arr, ...arr2, `mehmet`, `mukhtiar`]; // Modern method
-      // console.log(concatinateArraySecond);
-
-      let fruits = [`apple`, `mango`, `banana`];
-
-      // fruits.forEach((item) => {   // forEach operator
-      //   console.log(item);
-      // });
-
-      //====
-
-      // let numbers = [1, 2, 3, 4, 5];
-      // let result = numbers.map((item) => {   // map operator
-      //   return item * 2;
-      // });
-      // console.log(result);
-
-      //====
-
-      // let number1 = [10, 20, 30, 40, 50];
-      // let result1 = numbers1.filter((item) => {    // filter operator
-      //   return item > 25;
-      // });
-      // console.log(result1);
-
-      //====
-
-      let users = [                 // making objects inside array
-        { id: 1, name: "Qasim" },
-        { id: 2, name: "Ali" },
-      ];
-      let resultZ = users.find((item) => {    // find operator in arrays
-        return item.id === 2;
-      });
-      console.log(resultZ);
-
-      // ====
-
-      let resultz = fruits.findIndex((item) => {
-        return item === "mango";
-      });
-      console.log(resultz);
-
-      // ====
-
-      console.log(fruits.includes("apple"));
+        document.getElementById("result").innerHTML = result;
+      };
     </script>
   </body>
 </html>
