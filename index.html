@@ -6,53 +6,46 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="number" name="" id="num1" /><br />
-    <input type="text" name="" id="num2" /><br />
-    <button onclick="add()">Add</button><br />
-    <!--Addition tag-->
-    <button onclick="sub()">Subtract</button><br />
-    <!--Subtraction tag-->
-    <button onclick="mul()">Multiply</button><br />
-    <!--Multiplication tag-->
-    <button onclick="div()">Divide</button><br />
-    <!--Division tag-->
-    <h2 id="result"></h2>
+    <input type="text" name="" id="name" placeholder="Name" /><br />
+    <input type="email" name="" id="email" placeholder="email" /><br />
+    <input
+      type="password"
+      name=""
+      id="password"
+      placeholder="Enter your password"
+    /><br />
+    <input
+      type="password"
+      name=""
+      id="confirmPassword"
+      placeholder="Re-Enter password"
+    /><br />
+    <button onclick="validateform()">Register</button>
 
     <script>
-      //----------> Addition function .js
-      const add = () => {
-        let num1 = document.getElementById("num1").value;
-        let num2 = document.getElementById("num2").value;
-        let result = parseFloat(num1) + parseFloat(num2);
+      const validateform = () => {
+        let name = document.getElementById(`name`).value;
+        let email = document.getElementById(`email`).value;
+        let password = document.getElementById(`password`).value;
+        let confirmPassword = document.getElementById(`confirmPassword`).value;
 
-        document.getElementById("result").innerHTML = result;
-      };
-
-      //----------> Subtraction function .js
-      const sub = () => {
-        let num1 = document.getElementById("num1").value;
-        let num2 = document.getElementById("num2").value;
-        let result = parseFloat(num1) - parseFloat(num2);
-
-        document.getElementById("result").innerHTML = result;
-      };
-
-      //----------> Multiplication function .js
-      const mul = () => {
-        let num1 = document.getElementById("num1").value;
-        let num2 = document.getElementById("num2").value;
-        let result = parseFloat(num1) * parseFloat(num2);
-
-        document.getElementById("result").innerHTML = result;
-      };
-
-      //----------> Division function .js
-      const div = () => {
-        let num1 = document.getElementById("num1").value;
-        let num2 = document.getElementById("num2").value;
-        let result = parseFloat(num1) / parseFloat(num2);
-
-        document.getElementById("result").innerHTML = result;
+        if (name.trim() === "") {
+          alert(`Please enter your name`);
+        } else if (email.trim() == "") {
+          alert(`Please enter yout email`);
+        } else if (!email.includes(`@`)) {
+          alert(`Please write a valid email address`);
+        } else if (password.trim() == "") {
+          alert(`Password with empty spaces is not allowed`);
+        } else if (password.length < 8 || password.length > 12) {
+          alert(
+            `Password must be more than 8 character and less than 12 characters`,
+          );
+        } else if (password != confirmPassword) {
+          alert(`Password does not match`);
+        } else {
+          alert(`Form submitted successfully`);
+        }
       };
     </script>
   </body>
