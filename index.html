@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign up portal</title>
   </head>
   <body>
-    <input type="text" name="" id="name" placeholder="Name" /><br />
-    <input type="email" name="" id="email" placeholder="email" /><br />
+    <input
+      type="firstName"
+      name=""
+      id="firstName"
+      placeholder="First name"
+    /><br />
+    <input
+      type="lastName"
+      name=""
+      id="lastName"
+      placeholder="Last name"
+    /><br />
+    <input
+      type="email"
+      name=""
+      id="email"
+      placeholder="Enter your email"
+    /><br />
     <input
       type="password"
       name=""
@@ -15,38 +31,34 @@
       placeholder="Enter your password"
     /><br />
     <input
-      type="password"
+      type="confirmPassword"
       name=""
       id="confirmPassword"
-      placeholder="Re-Enter password"
+      placeholder="Re-Enter your password"
     /><br />
-    <button onclick="validateform()">Register</button>
+    <fieldset>
+      <legend>Are you male or female</legend>
+      <div>
+        <input type="radio" name="" id="male" value="male" />
+        <label for="male">male</label>
+      </div>
+      <div>
+        <input type="radio" name="" id="female" value="female" />
+        <label for="female">female</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name=""
+          id="doNotPrefer"
+          value="Do not want to share"
+        />
+        <label for="doNotPrefer">Do not want to share</label>
+      </div>
 
-    <script>
-      const validateform = () => {
-        let name = document.getElementById(`name`).value;
-        let email = document.getElementById(`email`).value;
-        let password = document.getElementById(`password`).value;
-        let confirmPassword = document.getElementById(`confirmPassword`).value;
-
-        if (name.trim() === "") {
-          alert(`Please enter your name`);
-        } else if (email.trim() == "") {
-          alert(`Please enter yout email`);
-        } else if (!email.includes(`@`)) {
-          alert(`Please write a valid email address`);
-        } else if (password.trim() == "") {
-          alert(`Password with empty spaces is not allowed`);
-        } else if (password.length < 8 || password.length > 12) {
-          alert(
-            `Password must be more than 8 character and less than 12 characters`,
-          );
-        } else if (password !=== confirmPassword) {
-          alert(`Password does not match`);
-        } else {
-          alert(`Form submitted successfully`);
-        }
-      };
-    </script>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </fieldset>
   </body>
 </html>
