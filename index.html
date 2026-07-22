@@ -5,19 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
+  <style>
+
+    /* =========== Session 2: red, blue, green transfer of block ================= */
+    /* #box {
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+    }
+    .red {
+      background-color: #dcae96;
+    }
+    .blue {
+      background-color: #a0c4df;
+    }
+    .green {
+      background-color: #9caf88;
+    } */
+
+    
+
+    /* ========== Session 3: For black and white mode =========== */
+    /* .dark {
+      background-color: black;
+      color: white;
+    } */
+  </style>
   <body>
-    <button id="btn">click here</button>
+    <!-- <button id="btn">click here</button>
     <div id="heading">
       <h1>hello world</h1>
-    </div>
+    </div> -->
+
+     <!-- =========== Session 2: red, blue, green transfer of block =================  -->
+
+    <!-- <div id="box"></div>
+    <button id="redbtn">red</button>
+    <button id="bluebtn">blue</button>
+    <button id="greenbtn">green</button> -->
+
+    <!-- ====================================================== -->
+
+    <!-- <button onclick="mode()" id="btn">Dark Mode</button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, error
+      libero aliquam numquam id iure est voluptatibus voluptate velit repellat
+      doloribus? Corrupti facere rem nisi, fuga sed voluptatem ducimus dolorem.
+    </p> -->
 
     <script>
-      let btn = document.getElementById("btn");
-      let element = document.querySelector("#heading");
-      console.log(element);
-      btn.addEventListener("click", () => {
-        alert("button clicked");
-      });
+      // let btn = document.getElementById("btn");
+      // let element = document.querySelector("#heading");
+      // console.log(element);
+      // btn.addEventListener("click", () => {
+      //   alert("button clicked");
+      // });
+
+      //    /* =========== Session 2: red, blue, green transfer of block ================= */
+
+
+      // let box = document.getElementById("box");
+      // let redbtn = document.getElementById("redbtn");
+      // let bluebtn = document.getElementById("bluebtn");
+      // let greenbtn = document.getElementById("greenbtn");
+
+      // redbtn.addEventListener("click", () => {
+      //   box.classList.add("red");
+      //   box.classList.remove("green");
+      //   box.classList.remove("blue");
+      // });
+      // bluebtn.addEventListener("click", () => {
+      //   box.classList.add("blue");
+      //   box.classList.remove("red");
+      //   box.classList.remove("green");
+      // });
+      // greenbtn.addEventListener("click", () => {
+      //   box.classList.add("green");
+      //   box.classList.remove("red");
+      //   box.classList.remove("blue");
+      // });
+
+      
+      // /* ========== Session 3: For black and white mode =========== */
+
+      function mode() {
+        document.body.classList.toggle("dark");
+
+        let btn = document.getElementById("btn");
+
+        btn.innerHTML = document.body.classList.contains("dark")
+          ? "light Mode"
+          : "Dark Mode";
+      }
     </script>
   </body>
 </html>
