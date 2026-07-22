@@ -1,113 +1,23 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <!-- =========================================
-         Document Metadata
-    ========================================== -->
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="style.css" />
-  <title>Sign Up Portal</title>
-</head>
-
-<body>
-  <!-- =========================================
-         User Registration Form
-    ========================================== -->
-
-  <form action="/signup" method="post" onsubmit="return validateform();">
-    <!-- =====================================
-           User Information
-      ====================================== -->
-
-    <fieldset>
-      <legend>User Information</legend>
-
-      <div>
-        <label for="firstName">First Name</label>
-
-        <input type="text" id="firstName" name="firstName" placeholder="First name" required />
-      </div>
-
-      <div>
-        <label for="lastName">Last Name</label>
-
-        <input type="text" id="lastName" name="lastName" placeholder="Last name" />
-      </div>
-    </fieldset>
-
-    <!-- =====================================
-           Account Information
-      ====================================== -->
-
-    <fieldset>
-      <legend>Mail and Password</legend>
-
-      <div>
-        <label for="email">Email Address</label>
-
-        <input type="email" id="email" name="userMail" placeholder="Enter your email" required />
-      </div>
-
-      <div>
-        <label for="password">Password</label>
-
-        <input type="password" id="password" name="userPassword" placeholder="Enter your password" required />
-      </div>
-
-      <div>
-        <label for="confirmPassword">Confirm Password</label>
-
-        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password"
-          required />
-      </div>
-    </fieldset>
-
-    <!-- =====================================
-           Gender Selection
-      ====================================== -->
-
-    <fieldset>
-      <legend>Gender</legend>
-
-      <div>
-        <input type="radio" id="male" name="gender" value="Male" required />
-
-        <label for="male">Male</label>
-      </div>
-
-      <div>
-        <input type="radio" id="female" name="gender" value="Female" />
-
-        <label for="female">Female</label>
-      </div>
-
-      <div>
-        <input type="radio" id="doNotPrefer" name="gender" value="Prefer not to say" />
-
-        <label for="doNotPrefer">Prefer not to say</label>
-      </div>
-    </fieldset>
-
-    <!-- =====================================
-           Terms and Conditions
-      ====================================== -->
-
-    <div>
-      <input type="checkbox" id="Terms" name="terms" required />
-
-      <label for="Terms"> Accept Terms and Conditions </label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">click here</button>
+    <div id="heading">
+      <h1>hello world</h1>
     </div>
 
-    <!-- =====================================
-           Submit Button
-      ====================================== -->
-
-    <button type="submit">Submit</button>
-  </form>
-</body>
-
+    <script>
+      let btn = document.getElementById("btn");
+      let element = document.querySelector("#heading");
+      console.log(element);
+      btn.addEventListener("click", () => {
+        alert("button clicked");
+      });
+    </script>
+  </body>
 </html>
